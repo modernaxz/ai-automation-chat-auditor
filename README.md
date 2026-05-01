@@ -37,17 +37,16 @@ AI Automation Chat Auditor is an AI workflow automation project that analyzes LI
 - Implemented message filtering logic
 - Connected Webhook, AI API, Database, and Dashboard
 
-## Screenshots
+## Repository Structure
 
-### System Architecture
-_Add architecture image here_
-
-### n8n Workflow
-_Add n8n workflow screenshot here_
-
-### Dashboard
-_Add dashboard screenshot here_
-
-## Note
-
-This repository does not include any private customer data, API keys, tokens, or confidential information.
+```text
+ai-automation-chat-auditor/
+├── README.md
+├── database/
+│   └── schema.sql
+├── sample/
+│   └── sample-output.json
+└── docs/
+    ├── architecture.png
+    ├── n8n-workflow.png
+    └── dashboard.png
