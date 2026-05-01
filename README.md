@@ -50,3 +50,35 @@ ai-automation-chat-auditor/
     ├── architecture.png
     ├── n8n-workflow.png
     └── dashboard.png
+```
+
+## Screenshots
+
+### System Architecture
+![System Architecture](docs/architecture.png)
+
+### n8n Workflow
+![n8n Workflow](docs/n8n-workflow.png)
+
+### Dashboard
+![Dashboard](docs/dashboard.png)
+
+## Sample Output
+
+A mock sample output is provided in:
+
+```text
+sample/sample-output.json
+```
+
+## Database Schema
+
+A clean portfolio database schema is provided in:
+
+```text
+database/schema.sql
+```
+
+## Note
+
+This repository does not include any private customer data, API keys, tokens, database credentials, or confidential information.
