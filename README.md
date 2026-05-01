@@ -65,19 +65,11 @@ ai-automation-chat-auditor/
 
 ## Sample Output
 
-A mock sample output is provided in:
-
-```text
-sample/sample-output.json
-```
+A mock sample output is provided in [sample/sample-output.json](sample/sample-output.json).
 
 ## Database Schema
 
-A clean portfolio database schema is provided in:
-
-```text
-database/schema.sql
-```
+A clean portfolio database schema is provided in [database/schema.sql](database/schema.sql).
 
 ## Note
 
