@@ -1,0 +1,74 @@
+{
+  "project": "AI Automation Chat Auditor",
+  "workflow_stages": {
+    "1_incoming_message": {
+      "eventType": "message",
+      "messageType": "text",
+      "messageText": "ขอปลิ้นผ้ามากๆเลยค่ะ",
+      "userId": "sample_user_001",
+      "replyToken": "sample_reply_token",
+      "messageId": "sample_message_001",
+      "timestamp": "2026-01-01T10:30:00",
+      "sourceType": "user",
+      "channel": "line",
+      "senderType": "customer"
+    },
+    "2_filtering_result": {
+      "isSticker": false,
+      "isEventMessage": false,
+      "isTextMessage": true,
+      "isValidForAnalysis": true,
+      "note": "Only text messages are passed to the database and AI analysis workflow."
+    },
+    "3_duplicate_check": {
+      "isDuplicate": false,
+      "existingId": null,
+      "messageId": "sample_message_001",
+      "action": "insert_new_chat_log"
+    },
+    "4_raw_chat_log_record": {
+      "table": "ChatLogs",
+      "id": 34,
+      "userId": "sample_user_001",
+      "messageText": "ขอปลิ้นผ้ามากๆเลยค่ะ",
+      "replyToken": "sample_reply_token",
+      "messageId": "sample_message_001",
+      "messageType": "text",
+      "sourceType": "user",
+      "channel": "line",
+      "senderType": "customer",
+      "processingStatus": "analyzing",
+      "createdAt": "2026-01-01T10:30:00"
+    },
+    "5_ai_analysis_output": {
+      "ai_response": "ขอบคุณมากครับ/ค่ะ ดีใจที่ลูกค้าพอใจกับสินค้าของเราครับ/ค่ะ",
+      "customer_needs": "no specific need",
+      "intent": "praise",
+      "sales_outcome": "praise",
+      "sentiment": "positive",
+      "summary": "ลูกค้าชมว่าสินค้าดี"
+    },
+    "6_ai_output_validation": {
+      "isValid": true,
+      "validationRule": "sentiment is not empty",
+      "action": "continue_to_store_analysis_result"
+    },
+    "7_final_database_ready_record": {
+      "chatLogId": 34,
+      "messageId": "sample_message_001",
+      "userId": "sample_user_001",
+      "userMessage": "ขอปลิ้นผ้ามากๆเลยค่ะ",
+      "sentiment": "positive",
+      "intent": "praise",
+      "customerNeeds": "no specific need",
+      "salesOutcome": "praise",
+      "aiResponse": "ขอบคุณมากครับ/ค่ะ ดีใจที่ลูกค้าพอใจกับสินค้าของเราครับ/ค่ะ",
+      "summary": "ลูกค้าชมว่าสินค้าดี",
+      "storedIn": [
+        "ChatLogs",
+        "ChatAnalysis"
+      ]
+    }
+  },
+  "privacy_note": "This is mock sample data for portfolio demonstration. Real user IDs, tokens, message IDs, customer data, API keys, and database credentials are not included."
+}
